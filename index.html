@@ -8,59 +8,52 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #f8f9fa;
+            font-family: 'Inter', sans-serif;
+            color: #2F3E46;
+        }
+        .home {
+            background: url('raquel_picture.heic') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            text-align: center;
+        }
+        .nav-link {
+            color: #2F3E46;
+            text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
-<body class="text-gray-900">
-    <nav class="fixed top-0 w-full bg-white shadow-md p-4 flex justify-between">
+<body>
+    <nav class="fixed top-0 w-full bg-white shadow-md p-4 flex justify-between items-center">
         <h1 class="text-xl font-bold">Raquel Burden</h1>
-        <div>
-            <a href="#about" class="mx-2">About</a>
-            <a href="#resume" class="mx-2">Resume</a>
-            <a href="#projects" class="mx-2">Projects</a>
-            <a href="#contact" class="mx-2">Contact</a>
+        <div class="space-x-4">
+            <a href="about.html" class="nav-link">About</a>
+            <a href="resume.html" class="nav-link">Resume</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="contact.html" class="nav-link">Contact</a>
         </div>
     </nav>
     
-    <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-500 text-white">
-        <div class="text-center">
-            <h2 class="text-5xl font-bold">Welcome to My Portfolio</h2>
-            <p class="text-lg mt-4">Chemical Engineering | Research | Innovation</p>
-        </div>
-    </section>
-
-    <section id="about" class="h-screen flex items-center justify-center bg-white">
-        <div class="text-center">
+    <section class="home">
+        <div class="overlay">
             <h2 class="text-4xl font-bold">About Me</h2>
-            <p class="mt-4 max-w-2xl">I'm Raquel Burden, a Chemical Engineering student passionate about research, innovation, and photochemistry.</p>
-        </div>
-    </section>
-
-    <section id="resume" class="h-screen flex items-center justify-center bg-gray-100">
-        <div class="text-center">
-            <h2 class="text-4xl font-bold">Resume</h2>
-            <p class="mt-4">Download my resume <a href="#" class="text-blue-500">here</a>.</p>
-        </div>
-    </section>
-
-    <section id="projects" class="h-screen flex items-center justify-center bg-white">
-        <div class="text-center">
-            <h2 class="text-4xl font-bold">Projects</h2>
-            <p class="mt-4">Showcasing my research and technical work.</p>
-        </div>
-    </section>
-
-    <section id="contact" class="h-screen flex items-center justify-center bg-gray-100">
-        <div class="text-center">
-            <h2 class="text-4xl font-bold">Contact</h2>
-            <p class="mt-4">Find me on <a href="#" class="text-blue-500">LinkedIn</a> or email me at <a href="#" class="text-blue-500">raquel@example.com</a>.</p>
+            <p class="mt-4 max-w-2xl mx-auto">I'm Raquel Burden, a Chemical Engineering student passionate about research, innovation, and photochemistry.</p>
         </div>
     </section>
 
     <script>
-        gsap.from("h2", { duration: 1, y: 50, opacity: 0, stagger: 0.3 });
+        gsap.from(".overlay", { duration: 1, y: 50, opacity: 0 });
     </script>
 </body>
 </html>
